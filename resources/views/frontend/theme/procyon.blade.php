@@ -22,7 +22,7 @@
             {!!$portfolioConfig['script']['header']!!}
         </script>
     @endif
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta property="og:title" content="{{$portfolioConfig['seo']['title']}}"/>
@@ -63,7 +63,7 @@
             border-color: rgba({{$accentColorRGB}}, .5) !important;
             box-shadow: none;
         }
-        
+
         .border-primary {
             border-color: var(--z-accent-color) !important;
         }
@@ -360,9 +360,9 @@
                     <h2 class="mb-4">Projects</h2>
                 </div>
             </div>
-            <div 
-                id="react-project-root" 
-                data-accentcolor="{{$accentColor}}" 
+            <div
+                id="react-project-root"
+                data-accentcolor="{{$accentColor}}"
                 data-demomode="{{$demoMode}}"
             />
             <div class="mb-5"></div>
@@ -378,7 +378,7 @@
                     <h2 class="mb-4">Contact Me</h2>
                 </div>
             </div>
-    
+
             <div class="row no-gutters block-9">
                 <div class="col-md-6 order-md-last d-flex">
                     <form action="#" method="POST" id="contact-me-form" class="bg-light p-4 p-md-5 contact-form" >
@@ -482,7 +482,7 @@
                     $(this).remove();
                 });
             }
-            
+
             if ($('#typed-strings').length) {
                 @if($about->taglines)
                     var typedStrings = new Typed('#typed-strings', {
@@ -555,7 +555,7 @@
                     });
                 }
             });
-            
+
             function showNotification(message = 'Something went wrong', type = 'error', sticky = false) {
                 iziToast.show({
                     title: '',
@@ -570,9 +570,34 @@
                     messageColor: type === 'success' ? '#00ffb8' : '#ffafb4',
                     icon: type === 'success' ? 'fas fa-check' : 'fas fa-times-circle'
                 });
-            }    
+            }
         });
     </script>
+    <style>
+        .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:40px;
+            right:40px;
+            background-color:#25d366;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+            font-size:30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index:100;
+        }
+
+        .my-float{
+            margin-top:16px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/+6285232077520?text=Halo%20saya%20tertarik%20dengan%20layanan%20anda" class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
     @if (!empty($portfolioConfig['script']['footer']) && $portfolioConfig['script']['footer'] != '')
         <script>
             {!!$portfolioConfig['script']['footer']!!}

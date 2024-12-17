@@ -47,7 +47,7 @@ class FrontendController extends Controller
         }
 
         $data['demoMode'] = Config::get('custom.demo_mode');
-        
+
         if (empty($data['about'])) {
             return view('errors.custom', ['message' => 'Database has not propagated properly. Try running migration with seed.']);
         }
@@ -57,7 +57,7 @@ class FrontendController extends Controller
         }
 
         $template = $data['portfolioConfig']['template'];
-
+        // dd($template); procyon
         return view('frontend.theme.'.$template, $data);
     }
 
@@ -72,7 +72,7 @@ class FrontendController extends Controller
         if (!empty($request->event) && $request->event == 'page_visit') {
             FrontendVisited::dispatch($request->all());
         }
-        
+
         header('Content-type: image/gif');
         echo base64_decode('R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
     }
