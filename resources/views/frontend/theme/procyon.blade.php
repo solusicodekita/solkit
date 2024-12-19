@@ -595,7 +595,7 @@
     </style>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://wa.me/+6285232077520?text=Halo%20saya%20tertarik%20dengan%20layanan%20anda" class="float" target="_blank">
+    <a href="https://wa.me/+628962517315?text=Halo%20saya%20tertarik%20dengan%20layanan%20anda" class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
     @if (!empty($portfolioConfig['script']['footer']) && $portfolioConfig['script']['footer'] != '')
